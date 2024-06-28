@@ -19,6 +19,8 @@ buttonCreate.addEventListener("click", clearField);
 buttonDelete.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
+  boxes.innerHTML = "";
+
   amount = input.value;
 
   if (amount > 0 && amount <= 100) {
