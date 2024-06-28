@@ -48,7 +48,6 @@ img {
   background-color: #f6f6fe;
   padding: 32px;
   justify-content: center;
-  gap: 44px;
 }
 
 .input {
@@ -63,9 +62,7 @@ img {
 .btn {
   width: 120px;
   height: 40px;
-
   color: #fff;
-
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
@@ -82,8 +79,3 @@ img {
 .red {
   background-color: #ff4e4e;
 }
-
-/* .box {
-  width: 30px;
-  height: 30px;
-} */

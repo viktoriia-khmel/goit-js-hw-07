@@ -1,7 +1,5 @@
 "use strict";
 
-const controls = document.querySelector("#controls");
-
 const boxes = document.querySelector("#boxes");
 
 const buttonCreate = document.querySelector(".blue");
@@ -14,7 +12,7 @@ const box = document.querySelectorAll(".box");
 
 buttonCreate.addEventListener("click", createBoxes);
 
-buttonCreate.addEventListener("click", clearField);
+// buttonCreate.addEventListener("click", clearField);
 
 buttonDelete.addEventListener("click", destroyBoxes);
 
@@ -28,6 +26,12 @@ function createBoxes(amount) {
 
     let size = 30;
 
+    const fragment = document.createElement("div");
+
+    fragment.style.display = "flex";
+    fragment.style.flexWrap = "wrap";
+    fragment.style.gap = "44px";
+
     for (let i = 0; i < amount; i += 1) {
       const box = document.createElement("div");
 
@@ -36,14 +40,17 @@ function createBoxes(amount) {
       size += 10;
       box.style.backgroundColor = getRandomHexColor();
 
-      boxes.append(box);
+      fragment.append(box);
     }
+    boxes.append(fragment);
+
+    input.value = "";
   }
 }
 
-function clearField() {
-  input.value = "";
-}
+// function clearField() {
+//   input.value = "";
+// }
 
 function destroyBoxes() {
   boxes.innerHTML = "";
